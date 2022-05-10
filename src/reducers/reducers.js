@@ -3,8 +3,8 @@ import { ADD_PASSWORD, DELETE_PASSWORD, EDIT_PASSWORD } from '../actions'
 const passwordReducer = (state = [], action) => {
   switch(action.type) {
     case ADD_PASSWORD:
-      const {name, password} = action.payload
-      return[...state, {name, password}]
+      const {site, name, password} = action.payload
+      return[...state, {site, name, password}]
 
     case DELETE_PASSWORD:
       const {index} = action.payload
